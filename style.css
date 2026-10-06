@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080a0f;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #050609;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.logo-area h1 {
+    font-size: 23px;
+    letter-spacing: 3px;
+}
+
+header h1 {
+    font-size: 23px;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.hero {
+    min-height: calc(100vh - 75px);
+    padding: 8%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #030508dd, #03050866),
+        url("frente do hotel.jpg") center/cover;
+}
+
+.hero div {
+    max-width: 650px;
+}
+
+span {
+    color: #bbb;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.hero h2 {
+    font-size: 65px;
+    margin: 15px 0;
+    animation: aparecer 1s;
+}
+
+.hero p {
+    color: #ddd;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 14px 25px;
+    background: #3c60ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    background: #3c60ff;
+}
+
+.titulo {
+    text-align: center;
+    padding: 80px 20px 50px;
+}
+
+.titulo h2 {
+    font-size: 42px;
+    margin: 15px;
+}
+
+.titulo p,
+.monstro p,
+.quarto p {
+    color: #aaa;
+    line-height: 1.5;
+}
+
+.dormitorio {
+    padding: 80px 7%;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    min-height: 600px;
+}
+
+.monstro,
+.quarto {
+    width: 50%;
+}
+
+.monstro h2 {
+    font-size: 55px;
+    margin: 12px 0 20px;
+}
+
+.monstro img,
+.quarto img {
+    width: 100%;
+    height: 330px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.quarto img {
+    height: 380px;
+    object-fit: cover;
+    margin: 15px 0;
+}
+
+.monstro img:hover,
+.quarto img:hover {
+    transform: scale(1.03);
+}
+
+.sulley { background: #081018; }
+.sulley h2 { color: #55b9eb; }
+
+.mike { background: #0b130d; }
+.mike h2 { color: #75dc62; }
+
+.randall { background: #100b16; }
+.randall h2 { color: #b16cff; }
+
+.yeti { background: #081219; }
+.yeti h2 { color: #91ddff; }
+
+.passos,
+.depoimentos {
+    display: grid;
+    gap: 20px;
+    padding: 0 7% 80px;
+}
+
+.passos {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.depoimentos {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.passos div,
+.depoimentos div {
+    padding: 30px;
+    background: #11151d;
+    border: 1px solid #252a34;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.passos div:hover,
+.depoimentos div:hover {
+    transform: translateY(-5px);
+}
+
+.passos b {
+    color: #3c60ff;
+    font-size: 25px;
+}
+
+.passos h3 {
+    margin: 15px 0 10px;
+}
+
+.passos p,
+.depoimentos p {
+    color: #aaa;
+}
+
+.depoimentos b {
+    display: block;
+    margin-top: 15px;
+}
+
+.avaliacoes {
+    background: #0a0c12;
+}
+
+.final {
+    text-align: center;
+    padding: 100px 20px;
+    background: #050609;
+}
+
+.final h2 {
+    font-size: 42px;
+    margin: 15px;
+}
+
+.final p {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #666;
+    background: #030405;
+}
+
+.gato-correndo {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    z-index: 999;
+    pointer-events: none;
+    animation: correrTela 15s linear infinite;
+}
+
+.gato-correndo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes correrTela {
+    0% {
+        left: 0;
+        bottom: 0;
+    }
+    25% {
+        left: calc(100% - 70px);
+        bottom: 0;
+    }
+    50% {
+        left: calc(100% - 70px);
+        bottom: calc(100% - 70px);
+    }
+    75% {
+        left: 0;
+        bottom: calc(100% - 70px);
+    }
+    100% {
+        left: 0;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 0 5%;
+    }
+
+    header h1 {
+        font-size: 17px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero h2 {
+        font-size: 43px;
+    }
+
+    .dormitorio {
+        flex-direction: column;
+        padding: 60px 7%;
+    }
+
+    .monstro,
+    .quarto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .passos,
+    .depoimentos {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo h2,
+    .final h2 {
+        font-size: 32px;
+    }
+}
